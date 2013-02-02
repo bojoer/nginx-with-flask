@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Create a requirements file
+source env/bin/activate
+pip freeze > requirements.txt
+deactivate
