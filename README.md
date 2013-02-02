@@ -1,6 +1,12 @@
 Instructions
 ------------
 
+Domain Side:
+------------
+Add an A Record:
+dev 185.14.187.99 A (Address) 1800
+dev2 185.14.187.99 A (Address) 1800
+
 Server Side:
 ------------
 Copy to root home: 
