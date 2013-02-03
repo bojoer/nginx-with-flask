@@ -86,7 +86,7 @@ echo "server {
     listen       $SERVER_PORT;
     server_name  $SERVER_NAME;
  
-    location /static {
+    location /public {
         autoindex on;    
         alias /home/$PROJECT_NAME/www/;  
     }
