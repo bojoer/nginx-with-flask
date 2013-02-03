@@ -14,7 +14,7 @@ Add an A Record:
 Server Side:
 ------------
 Copy to root home: 
-- wget https://raw.github.com/markdessain/nginx-with-flask/master/sever_setup.sh
+- wget https://raw.github.com/markdessain/nginx-with-flask/master/server_setup.sh
 - wget https://raw.github.com/markdessain/nginx-with-flask/master/project_setup.sh
 - wget https://raw.github.com/markdessain/nginx-with-flask/master/server_restart.sh
 

@@ -88,7 +88,7 @@ echo "server {
  
     location /public {
         autoindex on;    
-        alias /home/$PROJECT_NAME/www/;  
+        alias /home/$PROJECT_NAME/www;  
     }
 
     location / {
