@@ -14,9 +14,9 @@ Add an A Record:
 Server Side:
 ------------
 Copy to root home: 
-- sever_setup.sh
-- project_setup.sh
-- server_restart.sh
+- wget https://raw.github.com/markdessain/nginx-with-flask/master/sever_setup.sh
+- wget https://raw.github.com/markdessain/nginx-with-flask/master/project_setup.sh
+- wget https://raw.github.com/markdessain/nginx-with-flask/master/server_restart.sh
 
 Run:
 - . ~/server_setup.sh
@@ -34,11 +34,10 @@ Load and update config:
 
 Client Side:
 ------------
-Load and update deployment config:
-- deploy/.deploy
-    master dev@185.14.187.99 . false
+Setup project files:
+- Clone https://github.com/markdessain/Flask-Template
+- Update deploy/.deploy
 
-Run:
 - virtualenv ./env
 - source env/bin/activate
 - pip install ...

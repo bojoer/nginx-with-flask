@@ -86,18 +86,23 @@ echo "server {
     listen       $SERVER_PORT;
     server_name  $SERVER_NAME;
  
+    location /static {
+        autoindex on;    
+        alias /home/$PROJECT_NAME/www/;  
+    }
+
     location / {
         include uwsgi_params;
         uwsgi_pass unix:/tmp/uwsgi.sock;
         uwsgi_param UWSGI_PYHOME /home/$PROJECT_NAME/env;
-        uwsgi_param UWSGI_CHDIR /home/$PROJECT_NAME/www;
-        uwsgi_param UWSGI_MODULE application;
+        uwsgi_param UWSGI_CHDIR /home/$PROJECT_NAME;
+        uwsgi_param UWSGI_MODULE manage;
         uwsgi_param UWSGI_CALLABLE app;
     }
  
     error_page   404              /404.html;
- 
     error_page   500 502 503 504  /50x.html;
+
     location = /50x.html {
         root   /usr/share/nginx/html;
     }
